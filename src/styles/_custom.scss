@@ -1,0 +1,55 @@
+.dashboard {
+  .sidebar {
+    min-width: 230px;
+    background: var(--bs-primary);
+    border-radius: 7px;
+
+    .navs {
+      li {
+        a {
+          transition: all 0.15s ease-in;
+          &:hover {
+            color: var(--bs-primary-text) !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+table {
+  min-width: max-content;
+  thead {
+    &.rounded {
+      th:nth-child(1) {
+        border-radius: 6px 0px 0px 6px;
+      }
+
+      th:nth-last-child(1) {
+        border-radius: 0px 6px 6px 0px;
+      }
+    }
+  }
+  th,
+  td {
+    padding: 0.5rem 0.75rem;
+  }
+  th {
+    color: var(--bs-accent);
+    font-weight: 600;
+  }
+  td {
+    font-size: 15px;
+    font-weight: 500;
+    color: #5c556e;
+  }
+}
+
+.btn-accent-btn {
+  border-color: #ced4da !important;
+}
+
+.fit-width {
+  width: 1px;
+  white-space: nowrap;
+}

@@ -1,0 +1,26 @@
+$font-family-sans-serif: "Open Sans", system-ui, -apple-system, "Segoe UI",
+  Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$enable-responsive-font-sizes: true;
+
+$body-bg: #f8f8fa;
+
+$border-radius: 6px;
+$border-radius-sm: 5px;
+$border-radius-lg: 6px;
+
+$primary: #fe7418;
+$accent: #200a63;
+
+$theme-colors: (
+  "accent": $accent,
+  "primary-text": #a54708,
+  "accent-btn": #e6e2f2,
+  "light-success": #c1edd3,
+  "primary": $primary,
+);
+
+$spinner-width: 1.5rem;
+$spinner-border-width: 2px;
+$spinner-border-width-sm: 2px;
+$spinner-animation-speed: 1s;
