@@ -1,6 +1,6 @@
 import React from "react";
 import DashboardLayout from "../dashboard/dashboardLayout";
-import BlankLayout from "../dashboard/blankLayout";
+import BlankLayout from "../pages/blankLayout";
 
 import {
   Resellers,
@@ -9,6 +9,8 @@ import {
   Applications,
   Documentations,
 } from "../dashboard/pages/index";
+
+import { Login } from "../pages/index";
 
 import { Redirect } from "react-router-dom";
 
@@ -20,7 +22,12 @@ const routes = [
         name: "Index",
         path: "/",
         exact: true,
-        render: () => <Redirect to="/admin" />,
+        render: () => <Redirect to="/login" />,
+      },
+      {
+        name: "Login",
+        path: "/login",
+        component: Login,
       },
       {
         name: "Dashboard",
@@ -59,6 +66,12 @@ const routes = [
             component: Documentations,
           },
         ],
+      },
+      {
+        name: "Logout",
+        path: "/logout",
+        exact: true,
+        render: () => <Redirect to="/login" />,
       },
     ],
   },

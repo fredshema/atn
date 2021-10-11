@@ -53,3 +53,9 @@ table {
   width: 1px;
   white-space: nowrap;
 }
+
+.nav-text-accent {
+  a {
+    color: var(--bs-accent) !important;
+  }
+}
