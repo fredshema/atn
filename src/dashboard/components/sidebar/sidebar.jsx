@@ -28,7 +28,7 @@ function sidebar() {
             return (
               <li key={i} className="my-2.5 mx-3.5">
                 <Link
-                  className={`py-2.5 px-3.5  rounded-lg cursor-pointer uppercase font-semibold hover:bg-white no-underline w-100 block ${
+                  className={`py-2.5 px-3.5  rounded-lg cursor-pointer uppercase font-normal hover:bg-white no-underline w-100 block ${
                     isActive(route.path)
                       ? "text-primary-text bg-white"
                       : "text-white"
