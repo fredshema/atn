@@ -1,16 +1,11 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 
-import {
-  Form,
-  FormGroup,
-  FormLabel,
-  FormControl,
-  Button,
-} from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 
 function Login(props) {
   const logo = require("../../assets/logo.png").default;
+  const img = require("../../assets/undraw_remotely_2j6y.svg").default;
 
   let history = useHistory();
 
@@ -20,37 +15,60 @@ function Login(props) {
   }
 
   return (
-    <section className="bg-primary h-screen">
-      <div className="row mx-0 items-center justify-center h-100">
-        <div className="col-12 col-sm-8 col-md-6 col-lg-4">
-          <div className="card p-4 shadow">
-            <div className="logo flex items-center justify-center mb-2">
-              <img src={logo} alt="" className="rounded" />
-            </div>
-            {/* <h3 className="text-center">LOGIN</h3> */}
-            <Form onSubmit={authenticate}>
-              <FormGroup className="mb-3">
-                <FormLabel className="small font-semibold mb-1">
-                  Email
-                </FormLabel>
-                <FormControl required></FormControl>
-              </FormGroup>
-              <FormGroup className="mb-3">
-                <FormLabel className="small font-semibold mb-1">
-                  Password
-                </FormLabel>
-                <FormControl required type="password"></FormControl>
-              </FormGroup>
-              <FormGroup>
-                <Button type="submit" block className="w-100 text-white">
-                  LOGIN
+    <div className="content login ">
+      <nav>
+        <div className="brand p-2">
+          <img src={logo} alt="logo" className=" rounded" />
+        </div>
+      </nav>
+      <div className="container py-5">
+        <div className="row flex-nowrap">
+          <div className="col-12 col-sm-2 col-md-5 col-lg-6 d-none d-md-block">
+            <img src={img} alt="screen" className="img-fluid" />
+          </div>
+          <div className="col-12 col-sm-10 col-md-1 col-lg-1 contents">
+            <div className="w-full mx-auto" style={{ maxWidth: 350 + "px" }}>
+              <div className="mb-4">
+                <h3>Sign In</h3>
+              </div>
+              <Form onSubmit={authenticate}>
+                <div className="form-group first">
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="username"
+                    required
+                    placeholder="Enter Email"
+                  />
+                </div>
+                <div className="form-group last mb-4">
+                  <input
+                    type="password"
+                    className="form-control"
+                    id="password"
+                    required
+                    placeholder="Enter Password"
+                  />
+                </div>
+
+                <div className="d-flex mb-4 align-items-center">
+                  <span className="ml-auto">
+                    <span className="forgot-pass">Forgot Password</span>
+                  </span>
+                </div>
+                <Button
+                  type="submit"
+                  variant="accent"
+                  className="w-full text-white"
+                >
+                  Log in
                 </Button>
-              </FormGroup>
-            </Form>
+              </Form>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 
