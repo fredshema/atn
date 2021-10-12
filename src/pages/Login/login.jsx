@@ -2,7 +2,6 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 
 import { Form, Button } from "react-bootstrap";
-import "../../styles/login.css";
 
 function Login(props) {
   const logo = require("../../assets/logo.png").default;
